@@ -1,0 +1,155 @@
+@font-face {
+    font-family: "painter";
+    src: url("../font/painter.ttf");
+}
+
+@font-face {
+    font-family: "Yanone";
+    src: url("../font/YanoneKaffeesatz.ttf");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Yanone';
+}
+
+body{
+    background-color: #e9e9e9;
+}
+
+nav {
+    width: 12%;
+    height: 100%;
+    background-color: #2e383c;
+    color: white;
+    padding: 2%;
+    text-align: left;
+    position: fixed;
+    box-shadow: 5px 0 15px black;
+    z-index: 10;
+    font-family: 'Yanone', serif;
+    font-size: 1.6rem;
+}
+
+nav h1{
+    font-family: 'painter', serif;
+    font-size: 2.5rem;
+    margin-bottom: 10%;
+    padding-bottom: 20%;
+    border-bottom: groove;
+}
+
+nav ul li, #deco{
+    padding: 1.5%;
+    margin: 1%;
+    list-style: none;
+}
+
+nav a, nav a:visited{
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+nav a:hover{
+    text-decoration: overline;
+}
+
+.categorie{
+    padding-bottom: 10%;
+    margin-bottom: 10%;
+    border-bottom: groove;
+}
+
+#festival ul{
+    display: none;
+    font-family: 'Yanone', Serif;
+}
+
+#festival:hover ul{
+    display: block;
+    font-family: 'Yanone', serif;
+    font-size: 1.6rem;
+    width: 100%;
+    background-color: #2e383c;
+    position: absolute;
+    left: 74%;
+    top: 22%;
+    border-radius: 15px;
+}
+
+#page{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color:  rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 10px gray;
+    min-height: 80%;
+    padding: 5%;
+}
+
+#sous_menu {
+    background-color: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 10px darkgray;
+    width: 12%;
+    padding: 2%;
+    position: fixed;
+    right: 0;
+    top: 0;
+    height: 100%;
+}
+
+    /* --- Page admin lister article --- */
+
+#thead{
+    position: sticky;
+    top: 0;
+    background-color: rgba(113, 252, 255, 0.8);
+    border-top: none;
+    border-bottom: 1.5px solid black;
+}
+
+.modif_icon, .en_ligne{
+    color: limegreen;
+    font-size: 1.3rem;
+}
+.delete_icon, .hors_ligne{
+    color: red;
+    font-size: 1.3rem;
+}
+
+.flex_container{
+    display: flex;
+}
+
+.flex_1, .flex_2, .flex_3{
+    border-top: 1px solid black;
+    text-align: center;
+    margin: 0;
+    padding: 2%;
+}
+
+.flex_1{
+    flex: 1;
+}
+
+.flex_2{
+    flex: 2;
+}
+
+.flex_3{
+    flex: 3;
+}
+
+    /* --- Paramètre CSS --- */
+
+.parametre_categorie label input, .parametre_categorie label p, .parametre_categorie label div{
+    margin: 2%;
+    display: inline-block;
+    font-size: 1.4rem;
+}
+
+.parametre_categorie label input{
+    border: none;
+    background-color: rgba(0,0,0,0);
+}

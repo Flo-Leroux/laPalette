@@ -1,0 +1,160 @@
+@font-face {
+    font-family: "Yanone";
+    src: url("../font/YanoneKaffeesatz.ttf");
+}
+
+*{
+    font-family: 'Yanone';
+}
+
+/* ------ CONTAINER ET ACTUALITES - AJAX ---------------------------------------------------------------------------- */
+
+.flex_container{
+    display: flex;
+}
+
+.flex_1{ flex: 1;}
+
+#ajax_index{
+    width: 95%;
+    min-height: 80%;
+    margin: 5% auto;
+    z-index: -1;
+}
+
+.div_elem {
+    background-color: whitesmoke;
+    padding: 2%;
+    margin: 1.5%;
+    height: 75%;
+    max-width: auto;
+    position: relative;
+    overflow: hidden;
+}
+
+/* --- Rognage des images --- */
+
+.div_img{
+    height: 100%;
+    max-width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.div_img img{
+    max-height: 100%;
+    min-width: 100%;
+}
+
+.div_img a img{
+    filter: grayscale(0%);
+    transition: filter 1s ease-in-out;
+}
+
+.div_img a:hover img{
+    filter: grayscale(100%);
+    transition: filter 1s ease-in-out;
+}
+
+.div_img a{
+    text-decoration: none;
+}
+
+/* --- Ajout de la partie TITRE et LIRE LA SUITE --- */
+
+.titre_ajax, .suite_ajax {
+    height: auto;
+    color: whitesmoke;
+    position: absolute;
+    pointer-events: none;
+    transition: font-size 0.5s ease-in-out, top 0.5s ease-in-out, height 0.5s ease-in-out, width 0.5s ease-in-out;
+    font-family: Yanone;
+}
+
+.titre_ajax {
+    width: 60%;
+    padding: 5%;
+    font-size: 1.4rem;
+    box-shadow: 1px 1px 4px whitesmoke;
+    top: 10%;
+    left: 0;
+    border-bottom-right-radius: 10px;
+    text-align: left;
+}
+
+.suite_ajax {
+    text-align: right;
+    width: 35%;
+    padding: 2.5%;
+    font-size: 1.2rem;
+    box-shadow: -1px 1px 4px whitesmoke;
+    bottom: 10%;
+    right: 0;
+    border-bottom-left-radius: 10px;
+}
+
+.div_elem:hover .titre_ajax{
+    width: 75%;
+    height: 6%;
+    top: 7%;
+    font-size: 1rem;
+    border-bottom-right-radius: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    transition: font-size 0.5s ease-in-out, top 0.5s ease-in-out, height 0.5s ease-in-out, width 0.5s ease-in-out;
+}
+
+/* --- Affichage de l'extrait --- */
+
+.extrait_ajax{
+    width: 0;
+    height: 0;
+    padding: 35% 5% 5%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: whitesmoke;
+    background-color: rgba(147, 231, 131, 0.63);
+    transition: top 1s ease-in-out, left 1s ease-in-out, width 1s ease-in-out, height 1s ease-in-out, opacity 1s ease-in-out;;
+    text-align: justify;
+    overflow: hidden;
+    opacity: 0;
+}
+
+.extrait_ajax h1{
+    font-size: 1rem;
+    color: whitesmoke;
+}
+
+.div_img:hover .extrait_ajax{
+    width: 90%;
+    height: 95%;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    transition: top 1s ease-in-out, left 1s ease-in-out, width 1s ease-in-out, height 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+/* --- Positionnement des boutons < et > --- */
+
+#precedent_bouton, #suivant_bouton{
+    position: absolute;
+    top: 155%;
+    font-size: 6rem;
+    color: lightgray;
+    transition: all 1s ease-in-out;
+}
+
+#precedent_bouton:hover, #suivant_bouton:hover{
+    cursor: pointer;
+    color: black;
+    transition: all 1s ease-in-out;
+}
+
+#precedent_bouton{
+    left: 7%;
+}
+
+#suivant_bouton{
+    right: 7%;
+}
